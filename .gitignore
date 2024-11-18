@@ -1,3 +1,4 @@
-3dwork-klipper
-printer-*.cfg
 gcodes-*.zip
+moonraker.secrets
+printer-*.cfg
+3dwork-klipper
