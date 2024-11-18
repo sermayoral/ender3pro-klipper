@@ -25,6 +25,11 @@ cors_domains =
 
 [history]
 
+[mqtt]
+address = ha.lan
+username = {secrets.home_assistant.mqtt_user}
+password = {secrets.home_assistant.mqtt_pass}
+
 [file_manager]
 enable_object_processing = True
 
