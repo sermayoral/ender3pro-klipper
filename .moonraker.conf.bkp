@@ -57,6 +57,13 @@ repo = mainsail-crew/mainsail
 channel = stable
 type = web
 
+[update_manager mainsail-config]
+type = git_repo
+primary_branch = master
+path = ~/mainsail-config
+origin = https://github.com/mainsail-crew/mainsail-config.git
+managed_services = klipper
+
 [update_manager KlipperScreen]
 type = git_repo
 path = ~/KlipperScreen
