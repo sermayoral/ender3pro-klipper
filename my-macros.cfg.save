@@ -1,5 +1,0 @@
-# Incluimos la
-
-# Incluimos las macros del paquete KAMP_LiTE
-[include ./kamp-lite/*.cfg]
-

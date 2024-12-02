@@ -21,7 +21,8 @@ cors_domains =
 	*://my.mainsail.xyz
 	*://app.fluidd.xyz
 
-[octoprint_compat]
+[file_manager]
+enable_object_processing = True
 
 [history]
 
@@ -30,8 +31,7 @@ address = ha.lan
 username = {secrets.home_assistant.mqtt_user}
 password = {secrets.home_assistant.mqtt_pass}
 
-[file_manager]
-enable_object_processing = True
+[octoprint_compat]
 
 [update_manager]
 channel = dev
@@ -45,11 +45,30 @@ origin = https://github.com/mainsail-crew/crowsnest.git
 managed_services = crowsnest
 install_script = tools/pkglist.sh
 
+[update_manager demon-klipper]
+type = git_repo
+path = ~/printer_data/config/demon-klipper
+origin = https://github.com/3DPrintDemon/Demon_Klipper_Essentials_Unified.git
+primary_branch = main
+is_system_service = False
+managed_services = 
+	klipper
+	moonraker
+
 [update_manager kiauh]
 type = git_repo
 path = ~/kiauh
 origin = https://github.com/dw-0/kiauh.git
 is_system_service = False
+
+[update_manager KlipperScreen]
+type = git_repo
+path = ~/KlipperScreen
+origin = https://github.com/KlipperScreen/KlipperScreen.git
+virtualenv = ~/.KlipperScreen-env
+requirements = scripts/KlipperScreen-requirements.txt
+system_dependencies = scripts/system-dependencies.json
+managed_services = KlipperScreen
 
 [update_manager mainsail]
 path = ~/mainsail
@@ -63,15 +82,6 @@ primary_branch = master
 path = ~/mainsail-config
 origin = https://github.com/mainsail-crew/mainsail-config.git
 managed_services = klipper
-
-[update_manager KlipperScreen]
-type = git_repo
-path = ~/KlipperScreen
-origin = https://github.com/KlipperScreen/KlipperScreen.git
-virtualenv = ~/.KlipperScreen-env
-requirements = scripts/KlipperScreen-requirements.txt
-system_dependencies = scripts/system-dependencies.json
-managed_services = KlipperScreen
 
 [update_manager 3dwork-klipper]
 type = git_repo
