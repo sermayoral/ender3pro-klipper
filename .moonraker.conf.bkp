@@ -34,9 +34,7 @@ password = {secrets.home_assistant.mqtt_pass}
 [octoprint_compat]
 
 [update_manager]
-channel = dev
 refresh_interval = 168
-enable_auto_refresh = True
 
 [update_manager crowsnest]
 type = git_repo
@@ -82,13 +80,4 @@ primary_branch = master
 path = ~/mainsail-config
 origin = https://github.com/mainsail-crew/mainsail-config.git
 managed_services = klipper
-
-[update_manager 3dwork-klipper]
-type = git_repo
-path = ~/printer_data/config/3dwork-klipper
-origin = https://github.com/3dwork-io/3dwork-klipper.git
-is_system_service = False
-managed_services = 
-	klipper
-	moonraker
 
