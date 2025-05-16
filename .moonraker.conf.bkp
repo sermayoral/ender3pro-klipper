@@ -49,9 +49,7 @@ path = ~/printer_data/config/demon-klipper
 origin = https://github.com/3DPrintDemon/Demon_Klipper_Essentials_Unified.git
 primary_branch = main
 is_system_service = False
-managed_services = 
-	klipper
-	moonraker
+managed_services = klipper
 
 [update_manager kiauh]
 type = git_repo
