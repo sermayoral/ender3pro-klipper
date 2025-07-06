@@ -1,5 +1,10 @@
+.moonraker.conf.bkp
+!moonraker.conf
+crowsnest.conf.*
+!crowsnest.conf
 demon-klipper
 gcodes-*.zip
 kamp-lite
 mainsail.cfg
 printer-*.cfg
+!printer.cfg
