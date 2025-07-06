@@ -1,4 +1,4 @@
-.moonraker.conf.bkp
+#.moonraker.conf.bkp
 !moonraker.conf
 crowsnest.conf.*
 !crowsnest.conf
