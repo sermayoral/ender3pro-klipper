@@ -1,8 +1,10 @@
 .moonraker.conf.bkp
 !moonraker.conf
+config-*.zip
 crowsnest.conf.*
 !crowsnest.conf
 demon-klipper
+firmware.bin
 gcodes-*.zip
 kamp-lite
 mainsail.cfg
